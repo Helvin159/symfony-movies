@@ -7,14 +7,14 @@ use Symfony\Component\HttpFoundation\Response ;
 use Symfony\Component\Routing\Attribute\Route;
 
 
-class MoviesController extends AbstractController
+class HomeController extends AbstractController
 {
-    #[Route('/movies', name: 'movies')]
+    #[Route('/', name: 'home')]
     public function index():Response
     {
         $movies = ['Avengers: End Game', 'Inception', 'Loki', 'Black Widow'];
 
-       return $this->render('index.html.twig', array('movies' => $movies));
+       return $this->render('home.html.twig', array('movies' => $movies));
     }
     
 
