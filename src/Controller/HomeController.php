@@ -14,7 +14,7 @@ class HomeController extends AbstractController
     {
         $movies = ['Avengers: End Game', 'Inception', 'Loki', 'Black Widow'];
 
-       return $this->render('home.html.twig', array('movies' => $movies));
+       return $this->render('index.html.twig', array('movies' => $movies));
     }
     
 
