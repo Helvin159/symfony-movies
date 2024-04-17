@@ -14,7 +14,8 @@
             </span>
         </div>
     </div>
-    
+    {{app.user ? app.user.email : ''}}
+  {% if app.user %}
     <div class="mx-auto w-4/5 my-8">
         <a 
             href="/movies/create" 
@@ -22,6 +23,7 @@
             Create New movie
         </a>
     </div>
+  {% endif %}
     <div class="md:grid lg:grid-cols-3 gap-20 w-4/5 mx-auto py-15 ">
         <!-- Review Item -->
         {% for movie in movies %}
